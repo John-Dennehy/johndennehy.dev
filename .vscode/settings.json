@@ -1,5 +1,12 @@
 {
 	"cSpell.words": [
 		"johndennehy"
-	]
+	],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"eslint.workingDirectories": [
+		{ "pattern": "apps/*/" },
+		{ "pattern": "packages/*/" }
+	],
 }
