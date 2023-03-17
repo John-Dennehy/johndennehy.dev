@@ -14,15 +14,14 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "@total-typescript/ts-reset": "^0.4.2",
+    "eslint": "^8.36.0",
     "eslint-config-custom": "workspace:*",
-    "prettier": "latest",
-    "prettier-plugin-tailwindcss": "^0.1.11",
-    "turbo": "latest"
+    "prettier": "^2.8.4",
+    "turbo": "^1.8.3"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
   "packageManager": "pnpm@7.27.0"
 }

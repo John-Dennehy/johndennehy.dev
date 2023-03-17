@@ -1,16 +1,59 @@
-import * as React from "react";
+import { ReactElement, ReactNode } from "react";
+import { cva, VariantProps } from 'class-variance-authority'
 
-export const Button = () => {
+const styles = cva("transition-all ease-in-out duration-300  text-brandTextLight rounded-full p-2", {
+  variants: {
+    color: {
+      default: "bg-brandPrimary  hover:bg-brandPrimaryDark",
+      accent: "bg-brandAccent hover:bg-brandAccentDark",
+    },
+    outline: {
+      true: "border border-brandPrimary hover:bg-brandPrimary hover:text-brandTextLight",
+      false: "border border-transparent",
+    },
+    shadow: {
+      true: "shadow-md",
+      false: "shadow-none",
+    }
+  },
+  defaultVariants: {
+    color: "default",
+    outline: false,
+    shadow: true,
+  },
+})
+
+interface ButtonWithEvent extends React.HTMLAttributes<HTMLButtonElement>, VariantProps<typeof styles> {
+  href?: never;
+  outline?: boolean;
+  shadow?: boolean;
+  color?: "default" | "accent";
+}
+
+type ButtonWithHref = {
+  children: ReactNode;
+  href: string;
+  component?: ReactElement;
+  onClick?: never;
+  color?: "default" | "accent";
+  outline?: boolean;
+  shadow?: boolean;
+};
+
+type ButtonProps = ButtonWithEvent | ButtonWithHref;
+
+export const Button = ({
+  color = "default",
+  outline,
+  href,
+  onClick,
+  children,
+}: ButtonProps) => {
+
+
   return (
-    <div className="rounded-md ">
-      <a href="https://turbo.build/repo/docs">
-        <div className="ui-flex ui-w-full ui-items-center ui-justify-center ui-rounded-md ui-border ui-border-transparent ui-px-8 ui-py-3 ui-text-base ui-font-medium ui-no-underline ui-bg-white ui-text-black hover:ui-bg-gray-300 md:ui-py-3 md:ui-px-10 md:ui-text-lg md:ui-leading-6">
-          Read the docs
-          <span className="ui-ml-2 ui-bg-gradient-to-r ui-from-brandred ui-to-brandblue ui-bg-clip-text ui-text-transparent">
-            →
-          </span>
-        </div>
-      </a>
-    </div>
+    <button onClick={onClick} className={styles({ color, outline, })}>
+      {children}
+    </button>
   );
 };
