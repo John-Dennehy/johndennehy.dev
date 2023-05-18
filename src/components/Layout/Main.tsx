@@ -1,5 +1,3 @@
-import Footer from "./Footer";
-
 type MainProps = {
 	children: React.ReactNode;
 };
