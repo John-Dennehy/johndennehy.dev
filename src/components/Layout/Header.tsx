@@ -1,6 +1,6 @@
 import { UserButton } from "@clerk/nextjs";
-import { DarkModeToggle } from "../NavBar/DarkModeToggle";
-import NavLinks from "../NavBar/NavLinks";
+import { DarkModeToggle } from "../DarkModeToggle";
+import NavLinks from "../NavLinks";
 import Branding from "../Branding";
 
 const TITLE = "John Dennehy";
