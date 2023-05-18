@@ -1,7 +1,7 @@
 export default function Footer() {
 
 	return (
-		<footer className="bg-slate-100 ">
+		<footer className="bg-brandBgLight dark:bg-brandBgDark text-brandText dark:text-brandTextLight transition-colors duration-500">
 			<div className="container mx-auto grid grid-cols-3 p-4 ">
 				<div className="left flex flex-row items-center  ">
 

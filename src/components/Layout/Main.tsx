@@ -6,8 +6,10 @@ type MainProps = {
 
 export default function Main({ children }: MainProps) {
 	return (
-		<main className="container mx-auto h-full " >
-			<div className="h-full p-8">{children}</div>
+		<main className=" bg-brandBgLight dark:bg-brandBgDark text-brandText dark:text-brandTextLight transition-colors duration-500">
+			<div className="container mx-auto">
+				<div className="h-full p-8 ">{children}</div>
+			</div>
 		</main>
 	);
 }

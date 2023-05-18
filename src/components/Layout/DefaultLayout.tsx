@@ -8,9 +8,9 @@ type DefaultLayoutProps = {
 
 export default function DefaultLayout({ children }: DefaultLayoutProps) {
 	return (
-		<div className="grid grid-rows-header-and-main h-screen ">
-			<Header />
-			<div className="grid grid-rows-main-and-footer ">
+		<div className="bg-brandBgLight dark:bg-brandBgDark font-sans transition-colors duration-500 ">
+			<div className="grid grid-rows-pancake h-screen ">
+				<Header />
 				<Main>{children}</Main>
 				<Footer />
 			</div>

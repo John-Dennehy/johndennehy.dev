@@ -1,3 +1,6 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -20,17 +23,40 @@ module.exports = {
       },
       colors: {
         light: {
-          primary: "#6B46C1", // Purple
-          secondary: "#F6E05E", // Yellow
+          primary: "#6356ec", // Purple
+          secondary: "#FEA93B", // Yellow
           background: "#F7FAFC", // White
           text: "#2D3748", // Dark text for light mode
         },
         dark: {
-          primary: "#9F7AEA", // Lighter purple for dark mode
-          secondary: "#F6E05E", // Yellow remains the same
+          primary: colors.indigo[ 300 ], // Lighter purple for dark mode
+          secondary: "#FEA93B", // Yellow remains the same
           background: "#2D3748", // Dark background for dark mode
           text: "#F7FAFC", // Light text for dark mode
         },
+        // brand colors
+        brandText: colors.gray[ 500 ],
+        brandTextLight: colors.gray[ 50 ],
+        brandTextDark: colors.gray[ 900 ],
+
+        // 60% of page
+        brandBg: colors.gray[ 100 ],
+        brandBgLight: colors.gray[ 50 ],
+        brandBgDark: colors.gray[ 900 ],
+
+        // 30% of page
+        brandPrimary: "#6356ec",
+        brandPrimaryLight: colors.indigo[ 300 ],
+        brandPrimaryDark: colors.indigo[ 600 ],
+
+        // 10% of page
+        brandAccent: "#FEA93B",
+        brandAccentLight: colors.yellow[ 300 ],
+        brandAccentDark: colors.yellow[ 500 ],
+      },
+      fontFamily: {
+        sans: [ "var(--font-outfit)" ],
+        handwriting: [ "var(--font-pacifico)" ],
       },
     },
     gridTemplateRows: {
