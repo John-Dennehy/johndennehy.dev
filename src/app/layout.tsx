@@ -1,4 +1,5 @@
-import "@/styles/globals.css";
+import "@/style/globals.css";
+
 import { Inter } from "next/font/google";
 import { Caveat } from "next/font/google";
 import { Outfit } from "next/font/google";
