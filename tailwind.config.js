@@ -5,7 +5,9 @@ const withoutColorSpace = (color) => color.replace(/ /g, "")
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	darkMode: [ "class" ],
-	content: [ "./src/app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}" ],
+	content: [
+		"./src/**/*.{ts, tsx, mdx}",
+	],
 	theme: {
 		container: {
 			center: true,
