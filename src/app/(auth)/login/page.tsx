@@ -1,4 +1,4 @@
-import { AuthRequiredError } from "@/lib/exceptions"
+import { AuthRequiredError } from "@lib/exceptions"
 
 
 export default async function LoginPage() {

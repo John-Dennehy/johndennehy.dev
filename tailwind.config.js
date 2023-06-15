@@ -1,92 +1,88 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
+const { fontFamily } = require("tailwindcss/defaultTheme")
+
+const withoutColorSpace = (color) => color.replace(/ /g, "")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  darkMode: "class", // or 'media' or 'false'
-  theme: {
-    extend: {
-      height: {
-        "screen-dvh": "100dvh",
-        "screen-lvh": "100lvh",
-        "screen-svh": "100svh",
-      },
-      width: {
-        "screen-dvw": "100dvw",
-        "screen-lvw": "100lvw",
-        "screen-svw": "100svw",
-      },
-      colors: {
-        light: {
-          primary: "#6356ec", // Purple
-          secondary: "#FEA93B", // Yellow
-          background: "#F7FAFC", // White
-          text: "#2D3748", // Dark text for light mode
-        },
-        dark: {
-          primary: colors.indigo[ 300 ], // Lighter purple for dark mode
-          secondary: "#FEA93B", // Yellow remains the same
-          background: "#2D3748", // Dark background for dark mode
-          text: "#F7FAFC", // Light text for dark mode
-        },
-        // brand colors
-        brandText: colors.gray[ 500 ],
-        brandTextLight: colors.gray[ 50 ],
-        brandTextDark: colors.gray[ 900 ],
-
-        // 60% of page
-        brandBg: colors.gray[ 100 ],
-        brandBgLight: colors.gray[ 50 ],
-        brandBgDark: colors.gray[ 900 ],
-
-        // 30% of page
-        brandPrimary: "#6356ec",
-        brandPrimaryLight: colors.indigo[ 300 ],
-        brandPrimaryDark: colors.indigo[ 600 ],
-
-        // 10% of page
-        brandAccent: "#FEA93B",
-        brandAccentLight: colors.yellow[ 300 ],
-        brandAccentDark: colors.yellow[ 500 ],
-      },
-      fontFamily: {
-        sans: [ "var(--font-outfit)" ],
-        handwriting: [ "var(--font-pacifico)" ],
-      },
-    },
-    gridTemplateRows: {
-      pancake: "auto 1fr auto",
-      "header-and-main": "auto 1fr",
-      "main-and-footer": "1fr auto",
-    },
-  },
-  variants: {
-    extend: {
-      backgroundColor: [ "dark" ],
-      textColor: [ "dark" ],
-    },
-  },
-  plugins: [
-    require("@tailwindcss/container-queries"),
-    require("@tailwindcss/typography"),
-    function ({ addVariant }) {
-      addVariant(
-        "supports-backdrop-blur",
-        "@supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0))"
-      );
-      addVariant(
-        "supports-scrollbars",
-        "@supports selector(::-webkit-scrollbar)"
-      );
-      addVariant("children", "& > *");
-      addVariant("scrollbar", "&::-webkit-scrollbar");
-      addVariant("scrollbar-track", "&::-webkit-scrollbar-track");
-      addVariant("scrollbar-thumb", "&::-webkit-scrollbar-thumb");
-    },
-  ],
-};
+	darkMode: [ "class" ],
+	content: [ "./src/app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}" ],
+	theme: {
+		container: {
+			center: true,
+			padding: "2rem",
+			screens: {
+				"2xl": "1400px",
+			},
+		},
+		extend: {
+			colors: {
+				border: "hsl(var(--border))",
+				input: "hsl(var(--input))",
+				ring: "hsl(var(--ring))",
+				background: "hsl(var(--background))",
+				foreground: "hsl(var(--foreground))",
+				primary: {
+					DEFAULT: "hsl(var(--primary))",
+					foreground: "hsl(var(--primary-foreground))",
+				},
+				secondary: {
+					DEFAULT: "hsl(var(--secondary))",
+					foreground: "hsl(var(--secondary-foreground))",
+				},
+				destructive: {
+					DEFAULT: "hsl(var(--destructive))",
+					foreground: "hsl(var(--destructive-foreground))",
+				},
+				muted: {
+					DEFAULT: "hsl(var(--muted))",
+					foreground: "hsl(var(--muted-foreground))",
+				},
+				accent: {
+					DEFAULT: "hsl(var(--accent))",
+					foreground: "hsl(var(--accent-foreground))",
+				},
+				popover: {
+					DEFAULT: "hsl(var(--popover))",
+					foreground: "hsl(var(--popover-foreground))",
+				},
+				card: {
+					DEFAULT: "hsl(var(--card))",
+					foreground: "hsl(var(--card-foreground))",
+				},
+			},
+			borderRadius: {
+				lg: `var(--radius)`,
+				md: `calc(var(--radius) - 2px)`,
+				sm: "calc(var(--radius) - 4px)",
+			},
+			fontFamily: {
+				sans: [ "var(--font-outfit)", ...fontFamily.sans ],
+				handwriting: [ "var(--font-caveat)", ...fontFamily.serif ],
+			},
+			keyframes: {
+				"accordion-down": {
+					from: { height: 0 },
+					to: { height: "var(--radix-accordion-content-height)" },
+				},
+				"accordion-up": {
+					from: { height: "var(--radix-accordion-content-height)" },
+					to: { height: 0 },
+				},
+			},
+			animation: {
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
+			},
+		},
+		gridTemplateRows: {
+			pancake: "auto 1fr auto",
+			"header-and-main": "auto 1fr",
+			"main-and-footer": "1fr auto",
+		},
+	},
+	plugins: [
+		require("tailwindcss-animate"),
+		require("@tailwindcss/container-queries"),
+		require("@tailwindcss/typography"),
+	],
+}

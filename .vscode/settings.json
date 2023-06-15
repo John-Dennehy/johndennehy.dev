@@ -1,0 +1,30 @@
+{
+  "svg.preview.background": "dark-transparent",
+  "cSpell.words": [
+    "Asperand",
+    "clsx",
+    "johndennehy",
+    "lucide",
+    "nextjs",
+    "PGDATABASE",
+    "PGHOST",
+    "PGPASSWORD",
+    "PGPORT",
+    "PGUSER",
+    "planetscale",
+    "tinyint",
+    "undici"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.colorDecorators": true,
+  "colorize.colorized_variables": ["SASS", "CSS", "LESS"]
+}

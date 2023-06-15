@@ -1,9 +1,17 @@
 import { UserButton } from "@clerk/nextjs";
-import { DarkModeToggle } from "../DarkModeToggle";
 import NavLinks from "../NavLinks";
 import Branding from "../Branding";
 
+import Link from "next/link";
+import { Button } from "../ui/button";
+
 const TITLE = "John Dennehy";
+const navLinks = [
+	{ href: "/", label: "Home" },
+	{ href: "/blog", label: "Blog" },
+	{ href: "/projects", label: "Projects" },
+	{ href: "/cv", label: "CV" },
+];
 
 export default function Header() {
 	return (
@@ -20,21 +28,18 @@ export default function Header() {
 		>
 			<div className="container mx-auto grid grid-cols-3 p-4">
 				<div className="left flex flex-row items-center  ">
-					<Branding name="John Dennehy" />
+					<Branding name={TITLE} />
 				</div>
 				<div className="middle flex items-center justify-self-center">
 					<NavLinks
-						navLinks={[
-							{ href: "/", label: "Home" },
-							{ href: "/blog", label: "Blog" },
-							{ href: "/projects", label: "Projects" },
-							{ href: "/contact", label: "Contact" },
-						]}
+						navLinks={navLinks}
 					/>
 				</div>
 				<div className="right flex flex-row-reverse items-center gap-4">
 					<UserButton />
-					<DarkModeToggle />
+					<Button>
+						<Link href="/contact">Contact Me</Link>
+					</Button>
 				</div>
 			</div>
 		</header>
