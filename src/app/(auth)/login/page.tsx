@@ -1,4 +1,4 @@
-import { AuthRequiredError } from "@lib/exceptions"
+// import { AuthRequiredError } from "@lib/exceptions"
 
 
 export default async function LoginPage() {
@@ -9,7 +9,7 @@ export default async function LoginPage() {
 	await wait(1000)
 	const response = await data.json()
 
-	throw new AuthRequiredError()
+	// throw new AuthRequiredError()
 
 	return (
 		<div>
