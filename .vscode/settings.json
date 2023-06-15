@@ -26,5 +26,8 @@
     "strings": true
   },
   "editor.colorDecorators": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "colorize.colorized_variables": ["SASS", "CSS", "LESS"]
 }

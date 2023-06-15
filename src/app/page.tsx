@@ -14,7 +14,7 @@ export default async function Home() {
             Hi! 👋 <Handwriting>I&apos;m John.</Handwriting>
           </h2>
           <h3 className="description text-4xl mr-16  transition-colors duration-500">
-            I'm a web developer <br /> that will bring your{" "}
+            I&aposm a web developer <br /> that will bring your{" "}
             <Handwriting>ideas</Handwriting> <br /> to
             <Handwriting>life</Handwriting> with the latest, <br /> innovative
             technology.
@@ -33,14 +33,14 @@ export default async function Home() {
           faster-paced, more dynamic field. I took the plunge and completed an
           intensive web development bootcamp, mastering the fundamentals of Ruby
           and JavaScript. From there, I taught myself React and TypeScript, and
-          haven't looked back since.
+          haven&apost looked back since.
         </p>
         <p>
           Today, I thrive on using the latest technologies to create new and
-          exciting digital experiences. I'm passionate about staying on top of
+          exciting digital experiences. I&aposm passionate about staying on top of
           tech trends and continuously learning. In this fast-paced world of
-          frontend development, there's always something new to explore and
-          master, and that's just how I like it.
+          frontend development, there&aposs always something new to explore and
+          master, and that&aposs just how I like it.
         </p>
         <p>
           What sets me apart is not only my technical skills, but also my ability
@@ -51,8 +51,8 @@ export default async function Home() {
         </p>
         <p>
           Feel free to explore my site to learn more about my skills, experience,
-          and the projects I've worked on. If you have a vision you're looking to
-          bring to life, or just want to connect and talk tech, don't hesitate to
+          and the projects I&aposve worked on. If you have a vision you&aposre looking to
+          bring to life, or just want to connect and talk tech, don&apost hesitate to
           reach out.
         </p>
       </div>
