@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	experimental: {
-		serverActions: true
-	}
+		serverActions: false
+	},
+	images: {
+		domains: [
+			'www.datocms-assets.com',
+		]
+	},
 }
 
 module.exports = nextConfig

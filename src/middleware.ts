@@ -6,7 +6,7 @@ export default authMiddleware({
     // "/api(.*)",
     "/blog(.*)",
     "/contact",
-    "/cv",
+    "/experience(.*)",
     "/projects(.*)",
   ],
 });

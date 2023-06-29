@@ -5,10 +5,10 @@ import Image from "next/image";
 export default function Branding({ name }: { name: string }) {
 	return (
 		<Link href="/">
-			<div className="flex gap-4 items-center h-full">
-				<Image src={Logo} height={36} alt="Brand Logo" />
+			<div className="flex flex-shrink-0 gap-4 items-center h-full mr-4">
+				<Image src={Logo} height={48} width={48} alt="Brand Logo" />
 
-				<h1 className="text-3xl font-sans font-medium text-brandPrimaryDark dark:text-brandAccent align-middle">
+				<h1 className="text-xl font-sans font-semibold  tracking-tight align-middle">
 					{name}
 				</h1>
 			</div>

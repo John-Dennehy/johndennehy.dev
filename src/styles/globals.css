@@ -99,6 +99,13 @@
 
     --radius: 0.5rem;
   }
+  .scrollbar-gutter {
+  scrollbar-gutter: stable both-edges;
+}
+ @page {
+    size: A4;
+    margin: 0mm 0mm 0mm 0mm !important;
+  }
 }
 
 @layer base {
@@ -108,5 +115,8 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    print-color-adjust:exact !important;
   }
+
 }
+

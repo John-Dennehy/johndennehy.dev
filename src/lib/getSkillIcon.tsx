@@ -1,0 +1,73 @@
+import React from "react";
+import ReactIcon from "../components/icons/skills/React";
+import GithubIcon from "../components/icons/skills/Github";
+import JavascriptIcon from "../components/icons/skills/Javascript";
+import CssIcon from "../components/icons/skills/Css";
+import DockerIcon from "../components/icons/skills/Docker";
+import FirebaseIcon from "../components/icons/skills/Firebase";
+import GitIcon from "../components/icons/skills/Git";
+import SassIcon from "../components/icons/skills/Sass";
+import BitBucketIcon from "../components/icons/skills/BitBucket";
+import TypescriptIcon from "../components/icons/skills/Typescript";
+import SQLIcon from "../components/icons/skills/SQL";
+import StorybookIcon from "../components/icons/skills/Storybook";
+import HTMLIcon from "../components/icons/skills/HTML";
+import StyledComponentsIcon from "../components/icons/skills/StyledComponents";
+import CypressIcon from "../components/icons/skills/Cypress";
+import JestIcon from "../components/icons/skills/Jest";
+import JiraIcon from "../components/icons/skills/Jira";
+import MobXIcon from "../components/icons/skills/MobX";
+import TanStackQueryIcon from "../components/icons/skills/TanStackQuery";
+import MuiIcon from "../components/icons/skills/Mui";
+import NextIcon from "../components/icons/skills/Next";
+import NodeIcon from "../components/icons/skills/Node";
+import PostgreSQLIcon from "../components/icons/skills/Postgres";
+import RemixIcon from "../components/icons/skills/Remix";
+import TailwindIcon from "../components/icons/skills/Tailwind";
+import LinuxIcon from "../components/icons/skills/Linux";
+import ReactRouterIcon from "../components/icons/skills/ReactRouter";
+import AgoraIcon from "../components/icons/skills/Agora";
+import AirtableIcon from "../components/icons/skills/Airtable";
+import ReactHookFormsIcon from "../components/icons/skills/ReactHookForms";
+import TestingLibraryIcon from "../components/icons/skills/TestingLibrary";
+import ViteIcon from "../components/icons/skills/Vite";
+
+export function getSkillIcon(skillName: string) {
+  skillName = skillName.toLowerCase();
+
+  if (skillName === "agora") return <AgoraIcon />;
+  if (skillName === "airtable") return <AirtableIcon />;
+  if (skillName === "bitbucket") return <BitBucketIcon />;
+  if (skillName === "css") return <CssIcon />;
+  if (skillName === "cypress") return <CypressIcon />;
+  if (skillName === "docker") return <DockerIcon />;
+  if (skillName === "firebase") return <FirebaseIcon />;
+  if (skillName === "git") return <GitIcon />;
+  if (skillName === "github") return <GithubIcon />;
+  if (skillName === "html") return <HTMLIcon />;
+  if (skillName === "javascript") return <JavascriptIcon />;
+  if (skillName === "jest") return <JestIcon />;
+  if (skillName === "jira") return <JiraIcon />;
+  if (skillName === "linux") return <LinuxIcon />;
+  if (skillName === "mobx") return <MobXIcon />;
+  if (skillName === "mui") return <MuiIcon />;
+  if (skillName === "next") return <NextIcon />;
+  if (skillName === "node") return <NodeIcon />;
+  if (skillName === "postgresql") return <PostgreSQLIcon />;
+  if (skillName === "react") return <ReactIcon />;
+  if (skillName === "react-hook-forms") return <ReactHookFormsIcon />;
+  if (skillName === "react-router") return <ReactRouterIcon />;
+  if (skillName === "remix") return <RemixIcon />;
+  if (skillName === "sass") return <SassIcon />;
+  if (skillName === "storybook") return <StorybookIcon />;
+  if (skillName === "styled-components") return <StyledComponentsIcon />;
+  if (skillName === "sql") return <SQLIcon />;
+  if (skillName === "tailwindcss") return <TailwindIcon />;
+  if (skillName === "tanstack-query") return <TanStackQueryIcon />;
+  if (skillName === "testing-library") return <TestingLibraryIcon />;
+  if (skillName === "typescript") return <TypescriptIcon />;
+  if (skillName === "vite") return <ViteIcon />;
+
+  // else
+  return <p>{skillName} icon missing</p>;
+}
