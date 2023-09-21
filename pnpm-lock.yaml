@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -64,7 +64,7 @@ dependencies:
     version: 10.12.17(react-dom@18.2.0)(react@18.2.0)
   graphql-request:
     specifier: ^6.1.0
-    version: 6.1.0(graphql@16.7.1)
+    version: 6.1.0(graphql@16.8.1)
   lucide-react:
     specifier: ^0.241.0
     version: 0.241.0(react@18.2.0)
@@ -85,7 +85,7 @@ dependencies:
     version: 18.2.0
   react-datocms:
     specifier: ^4.1.3
-    version: 4.1.3(graphql@16.7.1)(react@18.2.0)
+    version: 4.1.3(graphql@16.8.1)(react@18.2.0)
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
@@ -124,7 +124,7 @@ devDependencies:
 
 packages:
 
-  /@0no-co/graphql.web@1.0.4(graphql@16.7.1):
+  /@0no-co/graphql.web@1.0.4(graphql@16.8.1):
     resolution: {integrity: sha512-W3ezhHGfO0MS1PtGloaTpg0PbaT8aZSmmaerL7idtU5F7oCI+uu25k+MsMS31BVFlp4aMkHSrNRxiD72IlK8TA==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
@@ -132,7 +132,7 @@ packages:
       graphql:
         optional: true
     dependencies:
-      graphql: 16.7.1
+      graphql: 16.8.1
     dev: false
 
   /@aashutoshrathi/word-wrap@1.2.6:
@@ -1568,6 +1568,7 @@ packages:
 
   /@emotion/memoize@0.7.4:
     resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -1626,12 +1627,12 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: false
 
-  /@graphql-typed-document-node/core@3.2.0(graphql@16.7.1):
+  /@graphql-typed-document-node/core@3.2.0(graphql@16.8.1):
     resolution: {integrity: sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
     dependencies:
-      graphql: 16.7.1
+      graphql: 16.8.1
     dev: false
 
   /@humanwhocodes/config-array@0.11.10:
@@ -2921,10 +2922,10 @@ packages:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
     dev: false
 
-  /datocms-listen@0.1.15(graphql@16.7.1):
+  /datocms-listen@0.1.15(graphql@16.8.1):
     resolution: {integrity: sha512-0LcdKYW/ilWdyrRzQ+YbkAk4r2dge63vzHtfv19L8pfbfYurQgXP9/ck703QZL//YqBoc0OKBS4BP4WUQ6JDKA==}
     dependencies:
-      '@0no-co/graphql.web': 1.0.4(graphql@16.7.1)
+      '@0no-co/graphql.web': 1.0.4(graphql@16.8.1)
     transitivePeerDependencies:
       - graphql
     dev: false
@@ -4141,20 +4142,20 @@ packages:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
     dev: false
 
-  /graphql-request@6.1.0(graphql@16.7.1):
+  /graphql-request@6.1.0(graphql@16.8.1):
     resolution: {integrity: sha512-p+XPfS4q7aIpKVcgmnZKhMNqhltk20hfXtkaIkTfjjmiKMJ5xrt5c743cL03y/K7y1rg3WrIC49xGiEQ4mxdNw==}
     peerDependencies:
       graphql: 14 - 16
     dependencies:
-      '@graphql-typed-document-node/core': 3.2.0(graphql@16.7.1)
+      '@graphql-typed-document-node/core': 3.2.0(graphql@16.8.1)
       cross-fetch: 3.1.6
-      graphql: 16.7.1
+      graphql: 16.8.1
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /graphql@16.7.1:
-    resolution: {integrity: sha512-DRYR9tf+UGU0KOsMcKAlXeFfX89UiiIZ0dRU3mR0yJfu6OjZqUcp68NnFLnqQU5RexygFoDy1EW+ccOYcPfmHg==}
+  /graphql@16.8.1:
+    resolution: {integrity: sha512-59LZHPdGZVh695Ud9lRzPBVTtlX9ZCV150Er2W43ro37wVof0ctenSaskPPjN7lVTIN8mSZt8PHUNKZuNQUuxw==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
     dev: false
 
@@ -5208,13 +5209,13 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /react-datocms@4.1.3(graphql@16.7.1)(react@18.2.0):
+  /react-datocms@4.1.3(graphql@16.8.1)(react@18.2.0):
     resolution: {integrity: sha512-60LfzlPbud7M9cDXzTaZy6sgCBHGWM/WEN4pZxlvnRRW74tOAAKjSgcGIJ5WIC/I+iiXvHp//75TQg0Y7+ozZQ==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
       react: '>= 16.12.0'
     dependencies:
-      datocms-listen: 0.1.15(graphql@16.7.1)
+      datocms-listen: 0.1.15(graphql@16.8.1)
       datocms-structured-text-generic-html-renderer: 2.0.4
       datocms-structured-text-utils: 2.0.4
       react: 18.2.0
