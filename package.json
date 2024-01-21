@@ -13,7 +13,7 @@
     "db:drop": "drizzle-kit drop --config=./drizzle.config.ts"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.21.12",
+    "@clerk/nextjs": "^4.29.3",
     "@planetscale/database": "^1.7.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-switch": "^1.0.3",
