@@ -1,14 +1,14 @@
-export const formatDate = (
-  date: Date,
-  locale?: string,
-  options?: Intl.DateTimeFormatOptions
-) => {
-  if (!locale) {
-    locale = "en-GB";
-  }
-  if (!options) {
-    options = { month: "short", year: "numeric" };
-  }
 
-  return new Date(date).toLocaleDateString(locale, options);
+const DEFAULT_LOCALE = "en-GB";
+const DEFAULT_DATE_OPTIONS: Intl.DateTimeFormatOptions = {
+	month: "short",
+	year: "numeric",
+};
+
+export const formatDate = (
+	date: Date,
+	locale: string = DEFAULT_LOCALE,
+	options: Intl.DateTimeFormatOptions = DEFAULT_DATE_OPTIONS,
+) => {
+	return new Date(date).toLocaleDateString(locale, options);
 };
