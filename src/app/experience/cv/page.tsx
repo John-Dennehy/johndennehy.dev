@@ -1,8 +1,8 @@
 // import Styles from "@/styles/CV.module.scss";
-import { CV_QUERY } from "@/src/graphql";
+import { CV_QUERY } from "@/graphql";
 import { request } from "@/lib/datoCMS";
-import CV from "@/src/components/CV/CV";
-import { cn } from "@/src/lib/utils";
+import CV from "@/components/CV/CV";
+import { cn } from "@/lib/utils";
 
 export default async function CVPage() {
   const pageData = await request({

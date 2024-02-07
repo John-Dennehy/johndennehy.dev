@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "../components/ui/button";
-import ImageBorder from "@/src/components/ImageBorder";
+import ImageBorder from "@/components/ImageBorder";
 import { Handwriting } from "../components/Handwriting";
 
 

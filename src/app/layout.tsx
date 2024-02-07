@@ -6,7 +6,7 @@ import { Caveat } from "next/font/google";
 import { Outfit } from "next/font/google";
 
 import { ClerkProvider } from "@clerk/nextjs";
-import DefaultLayout from "@/src/components/Layout";
+import DefaultLayout from "@/components/Layout";
 import { cn } from "../lib/utils";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });

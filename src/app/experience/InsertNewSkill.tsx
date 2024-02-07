@@ -1,6 +1,6 @@
 'use client'
 
-import { NewSkill } from "@/src/db/queries/Skill"
+import { NewSkill } from "@/db/queries/Skill";
 import { insertSkill } from "./actions"
 
 type Props = {
