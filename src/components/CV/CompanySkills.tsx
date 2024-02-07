@@ -1,6 +1,6 @@
 import { Skill } from "@/lib/types";
 import { byName } from "@/lib/sort";
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { getSkillIcon } from "@/lib/getSkillIcon";
 

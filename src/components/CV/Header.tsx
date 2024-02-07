@@ -3,7 +3,7 @@ import { StructuredText } from "react-datocms";
 import { StructuredTextDocument } from "react-datocms";
 import ContactDetailsComponent from "./ContactDetails";
 import type { ContactDetails } from "@/lib/types";
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 
 type HeaderProps = {
   name: string;

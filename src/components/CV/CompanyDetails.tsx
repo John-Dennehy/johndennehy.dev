@@ -1,7 +1,7 @@
 import React from "react";
 import type { Company, Wrapper } from "@/lib/types";
 import Styles from "@/styles/CV.module.scss";
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 import { CompanySkills } from "./CompanySkills";
 import { DividerVertical } from "./DividerVertical";
 import { RoleDetails } from "./RoleDetails";

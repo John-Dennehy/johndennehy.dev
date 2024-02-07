@@ -1,6 +1,6 @@
 import CompanyDetails from "./CompanyDetails";
 import * as Types from "@/lib/types";
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 
 const Experience = ({ companies }: Types.Experience) => {
   return (

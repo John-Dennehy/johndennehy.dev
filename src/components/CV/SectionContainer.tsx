@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 
 const SKILL_ICON_URL = "/img/heroicons-solid_code.svg";
 const EXPERIENCE_ICON_URL = "/img/fa-solid_globe-europe.svg";

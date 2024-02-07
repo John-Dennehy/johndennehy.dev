@@ -8,7 +8,7 @@ import Experience from "./Experience";
 import Styles from "@/styles/CV.module.scss";
 import type { Company, Skill, ContactDetails } from "@/lib/types";
 import { Header } from "./Header";
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 import { AnimatedContainer } from "./AnimatedContainer";
 
 interface CVProps {

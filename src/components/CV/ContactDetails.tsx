@@ -1,6 +1,6 @@
 import { ContactDetails, Wrapper } from "@/lib/types";
 import Image from "next/image";
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 import WwwIcon from "../icons/WwwIcon";
 import AtIcon from "../icons/AtIcon";
 import LinkedInIcon from "../icons/LinkedInIcon";

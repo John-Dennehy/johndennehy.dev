@@ -1,8 +1,8 @@
 import Badge from "./Badge";
 import { byName } from "@/lib/sort";
 import * as Types from "@/lib/types";
-import { cn } from "@/src/lib/utils";
-import { getSkillIcon } from "@/src/lib/getSkillIcon";
+import { cn } from "@/lib/utils";
+import { getSkillIcon } from "@/lib/getSkillIcon";
 
 interface Props {
   data: Array<Types.Skill>;
