@@ -1,6 +1,6 @@
 import { InferModel } from "drizzle-orm";
 import db from "..";
-import { skills } from "../schema/cv";
+import { skills } from "../schema/skills";
 
 export type Skill = InferModel<typeof skills, "select">;
 export type NewSkill = InferModel<typeof skills, "insert">;
