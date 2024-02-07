@@ -1,5 +1,5 @@
 
-export function LoadingSpinner({ }) {
+export function LoadingSpinner() {
 	return (
 		<div className=" relative">
 			<div className="absolute animate-spin bg-blend-lighten rounded-full h-16 w-16 border-t-3 border-b-2 border-brandPrimary" />
