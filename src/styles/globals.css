@@ -1,122 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
-#fbbe24
-#35bade
-#6f50e2
-#e250c3
-#bee042
-
-#fbbe24
-#c3f1fe
-#ccbefe
-#8ae665
-#5baa3c
-
-#fbbe24
-#7beaca
-#50e2b9
-#662c7d
-#38273f
- */
-
-
+ 
 @layer base {
   :root {
-    /* My colours */
-    --purple: 245 80% 63%; /* #6f50e2 */
-    --blue: 210 40% 98%; /* #60A5FA */
-    --green: 34 99% 61%; /* #10B981 */
-    --yellow: 34 99% 61%; /* #FBBF24 */
-    --red: 0 100% 50%; /* #EF4444 */
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
 
-    --white: 0 0% 100%; /* #fff */
-    --dark-navy: 222 46% 11%; /* #0f1729 */
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+ 
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+ 
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+ 
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+ 
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
 
-    /* Theme Colours */
-    --background: var(--white); /* #FFF */
-    --foreground: var(--dark-navy); /* #0f1729 */
-
-    --muted: 210 40% 96.1%;   /* hsl(210 40% 96%) */
-    --muted-foreground: 215.4 16.3% 46.9%; /* #65758b */
-
-    --popover: var(--white); 
-    --popover-foreground: var(--dark-navy); /* #1F2937 */
-
-    --card: var(--white); 
-    --card-foreground: var(--dark-navy); /* #1F2937 */
-
-    --border: 214.3 31.8% 91.4%; /* #D1D5DB */
-    --input: 214.3 31.8% 91.4%; /* #D1D5DB */
-
-    --primary: 245 80% 63%; /* hsl(245 80% 63%)*/
-    --primary-foreground: 210 40% 98%; /* #60A5FA */
-
-    --secondary: 34 99% 61%; /* #10B981 */
-    --secondary-foreground: var(--dark-navy); /* #1F2937 */
-
-    --accent: 210 40% 96.1%; /* #E5E7EB */
-    --accent-foreground: var(--dark-navy); /* #1F2937 */
-
-    --destructive: 0 100% 50%;   /* #EF4444 */
-    --destructive-foreground: 210 40% 98%; /* #60A5FA */
-
-    --ring: 215 20.2% 65.1%; /* #6366F1 */
-
-    --radius: 0.5rem; /* 8px */
-  }
-
-  .dark {
-    --background: 224 71% 4%; /* #111827 */
-    --foreground: 213 31% 91%; /* #F9FAFB */
-
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
-
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
-
-    --card: 224 71% 4%;
-    --card-foreground: 213 31% 91%;
-
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
-
-    --secondary: var(--dark-navy);
-    --secondary-foreground: 210 40% 98%;
-
-    --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 216 34% 17%;
-
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+ 
     --radius: 0.5rem;
   }
-  .scrollbar-gutter {
-  scrollbar-gutter: stable both-edges;
-}
- @page {
-    size: A4;
-    margin: 0mm 0mm 0mm 0mm !important;
+ 
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+ 
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+ 
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+ 
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+ 
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+ 
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+ 
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+ 
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
   }
 }
-
+ 
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
-    print-color-adjust:exact !important;
   }
-
 }
-

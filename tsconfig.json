@@ -21,15 +21,9 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@/assets/*": ["./assets/*"],
+      "@/*": ["./src/*"],
       "@/public/*": ["./public/*"],
-      "@/app/*": ["./src/app/*"],
-      "@/components/*": ["src/components/*"],
-      "@/src/*": ["./src/*"],
-      "@/db/*": ["./src/db/*"],
-      "@/lib/*": ["./src/lib/*"],
-      "@/styles/*": ["./src/styles/*"]
+      "@/components/*": ["./src/components/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
