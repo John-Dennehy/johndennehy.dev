@@ -1,1 +1,1 @@
-export * from "@/src/components/Experience";
+export * from "@/components/Experience";
