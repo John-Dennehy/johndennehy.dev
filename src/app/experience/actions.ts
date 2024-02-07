@@ -1,8 +1,8 @@
 "use server";
 
-import db from "@/db";
+import { db } from "@/db";
 import { NewSkill } from "@/db/queries/Skill";
-import { skills } from "@/db/schema/cv";
+import { skills } from "@/db/schema/";
 
 export async function insertSkill(newSkill: NewSkill) {
 	console.log("inserting skill");
