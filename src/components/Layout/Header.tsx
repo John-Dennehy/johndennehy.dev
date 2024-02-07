@@ -9,7 +9,7 @@ import Image from "next/image";
 import { SlMenu } from "react-icons/sl";
 
 import { useState } from "react";
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 
 const TITLE = "John Dennehy";
 
@@ -80,9 +80,9 @@ function HamburgerMenu({ onClick }: HamburgerMenuProps) {
     onClick();
   };
   // return hamburger menu for mobile using lucide icons
-  return (
-    <button onClick={handleClick}>
-      <SlMenu />
-    </button>
-  );
+		return (
+			<button type="button" onClick={handleClick}>
+				<SlMenu />
+			</button>
+		);
 }
