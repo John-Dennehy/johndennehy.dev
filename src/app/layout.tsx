@@ -7,7 +7,7 @@ import { Caveat } from "next/font/google";
 
 import DefaultLayout from "@/components/Layout";
 import { ClerkProvider } from "@clerk/nextjs";
-import { cn } from "../../lib/utils";
+import { cn } from "../lib/utils";
 
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
 
