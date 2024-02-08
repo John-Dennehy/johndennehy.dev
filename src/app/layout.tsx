@@ -5,7 +5,8 @@ import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import { Caveat } from "next/font/google";
 
-import DefaultLayout from "@/components/Layout";
+import Footer from "@/components/Layout/Footer";
+import Header from "@/components/Layout/Header";
 import { ClerkProvider } from "@clerk/nextjs";
 import { cn } from "../lib/utils";
 
@@ -15,6 +16,11 @@ export const metadata = {
 	title: "John Dennehy",
 	description: "Personal website of John Dennehy",
 };
+
+const navLinks = [
+	{ href: "/", label: "Home" },
+	{ href: "/cv", label: "CV" },
+];
 
 type RootLayoutProps = {
 	children: React.ReactNode;
@@ -32,8 +38,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
 					"antialiased",
 				)}
 			>
-				<body className="transition-colors duration-500 font-sans">
-					<DefaultLayout>{children}</DefaultLayout>
+				<body className="transition-colors duration-500 font-sans w-screen">
+					<div className="grid h-screen grid-rows-pancake ">
+						<Header navLinks={navLinks} />
+						<main className="main bg-brandBgLight text-brandText transition-colors duration-500">
+							<div className="container mx-auto print:mx-0">
+								<div className="h-full p-8 print:p-0">{children}</div>
+							</div>
+						</main>
+						<Footer />
+					</div>
 				</body>
 			</html>
 		</ClerkProvider>
