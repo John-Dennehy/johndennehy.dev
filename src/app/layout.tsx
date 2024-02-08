@@ -28,6 +28,7 @@ export const metadata: Metadata = {
 		"Frontend",
 	],
 	creator: "John Dennehy",
+	metadataBase: new URL("https://www.johndennehy.dev"),
 	openGraph: {
 		title: "John Dennehy",
 		description: "Personal website of John Dennehy, Web Developer",
