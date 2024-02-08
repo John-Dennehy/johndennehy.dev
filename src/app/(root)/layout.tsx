@@ -9,7 +9,7 @@ import { Caveat } from "next/font/google";
 
 import DefaultLayout from "@/components/Layout";
 import { ClerkProvider } from "@clerk/nextjs";
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
 // const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
@@ -21,27 +21,27 @@ export const metadata = {
 };
 
 type RootLayoutProps = {
-  children: React.ReactNode;
+	children: React.ReactNode;
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  return (
-			<ClerkProvider>
-				<html
-					lang="en"
-					className={cn(
-						GeistSans.variable,
-						GeistMono.variable,
-						// outfit.variable,
-						// inter.variable,
-						caveat.variable,
-						"antialiased",
-					)}
-				>
-					<body className="transition-colors duration-500 font-sans">
-						<DefaultLayout>{children}</DefaultLayout>
-					</body>
-				</html>
-			</ClerkProvider>
-		);
+	return (
+		<ClerkProvider>
+			<html
+				lang="en"
+				className={cn(
+					GeistSans.variable,
+					GeistMono.variable,
+					// outfit.variable,
+					// inter.variable,
+					caveat.variable,
+					"antialiased",
+				)}
+			>
+				<body className="transition-colors duration-500 font-sans">
+					<DefaultLayout>{children}</DefaultLayout>
+				</body>
+			</html>
+		</ClerkProvider>
+	);
 }
