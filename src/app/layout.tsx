@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 		template: "%s | John Dennehy",
 		default: "John Dennehy", // a default is required when creating a template
 	},
-	description: "Personal website of John Dennehy",
+	description: "Personal website of John Dennehy, Web Developer",
 	referrer: "origin-when-cross-origin",
 	keywords: [
 		"Next.js",
@@ -32,15 +32,15 @@ export const metadata: Metadata = {
 	creator: "John Dennehy",
 	openGraph: {
 		title: "John Dennehy",
-		description: "The React Framework for the Web",
+		description: "Personal website of John Dennehy, Web Developer",
 		url: "https://www.johndennehy.dev",
 		siteName: "JohnDennehy.dev",
 
 		images: [
 			{
 				url: "/profile-square.jpg", // Must be an absolute URL
-				width: 800,
-				height: 600,
+				width: 400,
+				height: 400,
 			},
 		],
 		locale: "en_GB",
