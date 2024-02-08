@@ -1,23 +1,23 @@
 import "@/styles/globals.css";
 import "@/styles/globals1.scss";
 
-import { Inter } from "next/font/google";
-import { Caveat } from "next/font/google";
-import { Outfit } from "next/font/google";
-import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
+import { Caveat } from "next/font/google";
+// import { Inter } from "next/font/google";
+// import { Outfit } from "next/font/google";
 
-
-import { ClerkProvider } from "@clerk/nextjs";
 import DefaultLayout from "@/components/Layout";
+import { ClerkProvider } from "@clerk/nextjs";
 import { cn } from "../lib/utils";
 
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
+// const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
+// const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
-  title: "John Dennehy",
-  description: "Personal website of John Dennehy",
+	title: "John Dennehy",
+	description: "Personal website of John Dennehy",
 };
 
 type RootLayoutProps = {
@@ -30,15 +30,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
 				<html
 					lang="en"
 					className={cn(
-						GeistSans.className,
-						GeistMono.className,
-						outfit.className,
-						// `${inter.variable} ${caveat.variable}`,
+						GeistSans.variable,
+						GeistMono.variable,
+						// outfit.variable,
+						// inter.variable,
+						caveat.variable,
 						"antialiased",
-						"h-screen-dvh w-screen-dvw scrollbar-gutter overflow-x-hidden",
 					)}
 				>
-					<body className="transition-colors duration-500 ">
+					<body className="transition-colors duration-500 font-sans">
 						<DefaultLayout>{children}</DefaultLayout>
 					</body>
 				</html>
