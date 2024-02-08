@@ -25,7 +25,7 @@ type HeaderProps = {
 
 export default function Header({ navLinks = defaultNavLinks }: HeaderProps) {
 	return (
-		<header className="sticky left-0	right-0 top-0 z-50 bg-white shadow-sm	transition-colors print:hidden w-100">
+		<header className="sticky left-0	right-0 top-0 z-50 bg-white shadow-sm	transition-colors print:hidden w-screen">
 			<div className="container mx-auto ">
 				<div className="flex flex-col md:flex-row  items-center md:justify-between">
 					<div className="left">
