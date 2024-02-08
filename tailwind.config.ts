@@ -1,7 +1,14 @@
 import type { Config } from "tailwindcss";
+import animatePlugin from "tailwindcss-animate";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
-import animatePlugin from "tailwindcss-animate";
+import {
+	scrollbarColor,
+	scrollbarGutter,
+	scrollbarWidth,
+} from "tailwind-scrollbar-utilities";
+
+
 import containerQueriesPlugin from "@tailwindcss/container-queries";
 import typographyPlugin from "@tailwindcss/typography";
 export const config = {
@@ -63,7 +70,8 @@ export const config = {
 				sm: "calc(var(--radius) - 4px)",
 			},
 			fontFamily: {
-				sans: ["var(--font-outfit)", ...fontFamily.sans],
+				sans: ["var(--font-geist-sans)"],
+				mono: ["var(--font-geist-mono)"],
 				handwriting: ["var(--font-caveat)", ...fontFamily.serif],
 			},
 			keyframes: {
@@ -98,7 +106,14 @@ export const config = {
 			"1fr-auto-2fr": "1fr auto 2fr",
 		},
 	},
-	plugins: [animatePlugin, containerQueriesPlugin, typographyPlugin],
+	plugins: [
+		animatePlugin,
+		containerQueriesPlugin,
+		typographyPlugin,
+		scrollbarColor,
+		scrollbarGutter,
+		scrollbarWidth,
+	],
 } satisfies Config;
 
 export default config;
