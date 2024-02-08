@@ -41,8 +41,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
 				<body className="transition-colors duration-500 font-sans w-screen">
 					<div className="grid h-screen grid-rows-pancake ">
 						<Header navLinks={navLinks} />
-						<main className="main bg-brandBgLight text-brandText transition-colors duration-500">
-							<div className="container mx-auto print:mx-0">
+						<main className="main bg-brandBgLight text-brandText transition-colors duration-500 h-full">
+							<div className="container mx-auto print:mx-0 h-full">
 								<div className="h-full p-0 print:p-0">{children}</div>
 							</div>
 						</main>

@@ -1,11 +1,11 @@
-import { ContactDetails, Wrapper } from "@/lib/types";
-import Image from "next/image";
+import { type ContactDetails, Wrapper } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import WwwIcon from "../icons/WwwIcon";
+import Image from "next/image";
 import AtIcon from "../icons/AtIcon";
+import GithubIcon from "../icons/GithubIcon";
 import LinkedInIcon from "../icons/LinkedInIcon";
 import PhoneIcon from "../icons/PhoneIcon";
-import GithubIcon from "../icons/GithubIcon";
+import WwwIcon from "../icons/WwwIcon";
 
 type ContactDetailsProps = {
   data: ContactDetails[];

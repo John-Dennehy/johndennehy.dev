@@ -14,7 +14,7 @@ export function NavLink({ href, children, active }: NavLinkProps) {
 			<Link
 				href={href}
 				className={`font-light transition-all underline-offset-4 hover:underline hover:decoration-2
-				${active ? "underline decoration-2 decoration-purple-600" : ""}
+				${active ? "underline decoration-2 decoration-blue-600" : ""}
 				
 				`}
 			>
