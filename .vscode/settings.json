@@ -2,6 +2,7 @@
   "svg.preview.background": "dark-transparent",
   "cSpell.words": [
     "Asperand",
+    "biomejs",
     "clsx",
     "extralight",
     "johndennehy",
@@ -28,7 +29,9 @@
   },
   "editor.colorDecorators": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit" 
   },
+  "editor.defaultFormatter": "biomejs.biome",
   "colorize.colorized_variables": ["SASS", "CSS", "LESS"]
 }
