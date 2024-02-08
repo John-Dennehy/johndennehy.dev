@@ -1,15 +1,13 @@
-import "@/styles/globals.css";
-import "@/styles/globals1.scss";
-
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
-import { Caveat } from "next/font/google";
-
 import Footer from "@/components/Layout/Footer";
 import Header from "@/components/Layout/Header";
+import { cn } from "@/lib/utils";
+import "@/styles/globals.css";
+import "@/styles/globals1.scss";
 import { ClerkProvider } from "@clerk/nextjs";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import { Metadata } from "next";
-import { cn } from "../lib/utils";
+import { Caveat } from "next/font/google";
 
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
 
