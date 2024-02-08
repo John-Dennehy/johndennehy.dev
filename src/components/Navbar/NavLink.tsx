@@ -13,8 +13,8 @@ export function NavLink({ href, children, active }: NavLinkProps) {
 		<li>
 			<Link
 				href={href}
-				className={`font-light transition-all hover:text-purple-500
-				${active ? "font-medium text-purple-600" : ""}
+				className={`font-light transition-all underline-offset-4 hover:underline hover:decoration-2
+				${active ? "underline decoration-2 decoration-purple-600" : ""}
 				
 				`}
 			>

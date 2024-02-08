@@ -12,7 +12,7 @@ export const defaultNavLinks = [
 function JohnDennehy() {
 	return (
 		<Link href="/">
-			<h1 className="align-middle text-3xl font-sans font-light tracking-tight py-2">
+			<h1 className="align-middle text-3xl font-sans font-extralight tracking-tight py-2">
 				John Dennehy
 			</h1>
 		</Link>

@@ -43,7 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 						<Header navLinks={navLinks} />
 						<main className="main bg-brandBgLight text-brandText transition-colors duration-500">
 							<div className="container mx-auto print:mx-0">
-								<div className="h-full p-8 print:p-0">{children}</div>
+								<div className="h-full p-0 print:p-0">{children}</div>
 							</div>
 						</main>
 						<Footer />
