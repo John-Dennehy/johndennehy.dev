@@ -1,5 +1,7 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+
 type errorProps = { error: Error; reset: () => void };
 
 export default function error({ error, reset }: errorProps) {
@@ -7,8 +9,7 @@ export default function error({ error, reset }: errorProps) {
 		<div className="error">
 			<h1>Error Page</h1>
 			<p>{error.message}</p>
-			<button onClick={reset}>Reset</button>
-
+			<Button onClick={reset}>Reset</Button>
 		</div>
 	);
 }
