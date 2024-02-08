@@ -13,7 +13,10 @@ export function NavLink({ href, children, active }: NavLinkProps) {
 		<li>
 			<Link
 				href={href}
-				className={`font-bold transition-all ${active ? "underline" : ""}`}
+				className={`font-light transition-all hover:text-purple-500
+				${active ? "font-medium text-purple-600" : ""}
+				
+				`}
 			>
 				{children}
 				{active && <span className="sr-only">(current)</span>}
