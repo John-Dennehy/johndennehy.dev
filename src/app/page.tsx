@@ -1,35 +1,39 @@
-import AtIcon from "@/components/icons/AtIcon";
-import GithubIcon from "@/components/icons/GithubIcon";
-import LinkedInIcon from "@/components/icons/LinkedInIcon";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default async function Home() {
 	return (
-		<div className="grid grid-cols-1 h-full   mx-0 px-0  place-content-center  text-gray-600">
-			<h2 className="text-3xl font-light text-center ">Hey, I&apos;m John</h2>
+		<div className="grid h-full   mx-0 px-0  place-content-center  text-gray-600 ">
+			<div className="flex flex-col md:flex-row-reverse gap-4 h-full">
+				<div>
+					<Image
+						src="/profile-square.jpg"
+						alt="John Dennehy"
+						width={200}
+						height={200}
+						className="rounded-full mx-auto grayscale hover:grayscale-0  transition-all duration-500 h-[200] w-[200]"
+					/>
+				</div>
+				<div className="flex flex-col place-items-center md:place-items-start gap-4 h-full">
+					<h2 className="text-3xl font-light text-center w-full	md:text-left ">
+						Hey, I&apos;m John
+					</h2>
 
-			<p className="text-center  py-4 max-w-md">
-				I&apos;m a frontend web developer and all-round geek, based outside
-				London. I am currently a full-time dad, but looking for my next role.{" "}
-			</p>
-
-			<ul className="social-links flex flex-row gap-4 pt-8 text-blue-500 place-content-center">
-				<li>
-					<a href="https://www.linkedin.com/in/johnfdennehy/">
-						<LinkedInIcon className="h-10 w-10 hover:text-blue-600" />
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/John-Dennehy">
-						<GithubIcon className="h-10 w-10 hover:text-blue-600" />
-					</a>
-				</li>
-				<li>
-					<a href="mailto:hello@johndennehy.dev">
-						<AtIcon className="h-10 w-10 hover:text-blue-600" />
-					</a>
-				</li>
-			</ul>
+					<p className="text-pretty text-lg font-light max-w-xs">
+						I&apos;m a frontend web developer, dad, and all-round geek, based
+						outside London.
+					</p>
+					<Button asChild className="w-fit md:mt-4">
+						<a
+							target="_blank"
+							rel="noreferrer no-referrer"
+							href="mailto:hello@johndennehy.dev"
+						>
+							Let&apos;s talk
+						</a>
+					</Button>
+				</div>
+			</div>
 		</div>
 	);
 }
-
