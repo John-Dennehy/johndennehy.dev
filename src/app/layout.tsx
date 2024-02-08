@@ -8,13 +8,44 @@ import { Caveat } from "next/font/google";
 import Footer from "@/components/Layout/Footer";
 import Header from "@/components/Layout/Header";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Metadata } from "next";
 import { cn } from "../lib/utils";
 
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
 
-export const metadata = {
-	title: "John Dennehy",
+export const metadata: Metadata = {
+	title: {
+		template: "%s | John Dennehy",
+		default: "John Dennehy", // a default is required when creating a template
+	},
 	description: "Personal website of John Dennehy",
+	referrer: "origin-when-cross-origin",
+	keywords: [
+		"Next.js",
+		"React",
+		"JavaScript",
+		"TypeScript",
+		"Tailwind CSS",
+		"Web Development",
+		"Frontend",
+	],
+	creator: "John Dennehy",
+	openGraph: {
+		title: "John Dennehy",
+		description: "The React Framework for the Web",
+		url: "https://www.johndennehy.dev",
+		siteName: "JohnDennehy.dev",
+
+		images: [
+			{
+				url: "/profile-square.jpg", // Must be an absolute URL
+				width: 800,
+				height: 600,
+			},
+		],
+		locale: "en_GB",
+		type: "website",
+	},
 };
 
 const navLinks = [
