@@ -10,6 +10,7 @@ export default authMiddleware({
 		"/experience(.*)",
 		"/projects(.*)",
 	],
+	ignoredRoutes: ["/((?!api|trpc))(_next.*|.+.[w]+$)", "/icon"],
 });
 
 export const config = {
