@@ -33,5 +33,12 @@
     "source.organizeImports.biome": "explicit" 
   },
   "editor.defaultFormatter": "biomejs.biome",
-  "colorize.colorized_variables": ["SASS", "CSS", "LESS"]
+  "colorize.colorized_variables": [
+    "SASS",
+    "CSS",
+    "LESS"
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
 }
