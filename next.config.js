@@ -2,9 +2,13 @@
 const nextConfig = {
 	images: {
 		remotePatterns: [
-			'www.datocms-assets.com',
-		]
+			{
+				protocol: "https",
+				hostname: "www.datocms-assets.com",
+				pathname: "**",
+			},
+		],
 	},
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
